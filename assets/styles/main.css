@@ -1,0 +1,151 @@
+/*------Global Styles and Custome Variables
+ 1: Custom Colors
+ 2: Basic Resets: Margin and Padding. Explict Author Styles.
+-------*/
+:root {
+ /* Folio Design Tokens v1.0 */
+ /* --folio-core-bgcolor: hsl(240, 12, 20, 100%);
+ --folio-core-layout-bgcolor: hsl(240, 100%, 100%); */
+
+ /* Wireframes */
+ --mvp-wireframe-outline-color: hsl(204, 97%, 54%, 100%);
+ display: block;
+}
+
+/*-------
+3: Body Canvas Color.
+-------*/
+body {
+  background-color: #2d2d39;
+  border: 0;
+ /* Basic Resets */
+  margin: 0;
+ /* Basic Resets */
+}
+
+.body-container {
+ box-sizing: border-box;
+ padding: 1.5rem;
+}
+/*------Core Mobile Container-------*/
+.folio-core-layout {
+  background-color: hsl(240, 13%, 20%, 100%);
+  /* border: 5px solid hsl(204, 97%, 54%, 100%); */
+  margin: minmax(3rem, 315px);
+  min-height: 1vh;
+  width: minmax(40rem, 1fr)
+}
+
+/*------Core Top Bar-------*/
+/*------Core Top Bar Grid Container for a Flexible Space-------*/
+.folio-core-block-topbar {
+  border: 5px solid hsl(204, 97%, 54%, 100%);
+  display: grid;
+  grid-auto-column: [bar-col] 1fr;
+  grid-auto-row: [bar-row] 1fr;
+  grid-template-areas:
+  "top-bar";
+  margin: 0 0 2rem 0;
+}
+
+.folio-core-block-topbar-flex-spacer {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.folio-core-block-topbar-flex-spacer > .bar-components {
+  background-color: rgba(255, 255, 255, 0.432);
+  block-size: 60px;
+  border: 5px solid rgb(187, 24, 251);
+  border-radius: 5px;
+  flex: 1 0 auto;
+  max-block-size: 60px;
+  padding: 10px;
+  position: relative;
+}
+
+.folio-a11y-block-con {
+  align-items: flex-start;
+  flex: 1;
+  max-width: 60px;
+  position: left;
+}
+
+.folio-block-spacer {
+  block-size: 1px;
+  border: none;
+  flex-shrink: 0 1 auto;
+  margin: auto;
+  max-width: 1px;
+}
+
+.folio-logo-block-con {
+  display: inline-block;
+  flex: 3;
+  /* flex: none; */
+  margin: auto;
+  max-width: 115px;
+}
+
+.folio-logo-block-con img {
+  flex: 1;
+}
+
+.folio-menu-block-con {
+  align-items: flex-end;
+  block-size: 3.75rem;
+  max-width: 60px;
+  position: right;
+}
+
+/*------Core Mobile Fluid Grid, Explicit, for Key Landing Page-------*/
+.folio-core-grid {
+  display: grid;
+  grid-auto-row: [pane-top] 1fr, [pane-left] 1fr);
+  grid-gap: 2rem;
+  grid-column-gap: 2.5rem;
+  grid-template-areas:
+   "top-hero"
+   "btm-hero";
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  .folio-core-grid { grid-template-columns: repeat(2, 1fr); }
+  .body-container: {  padding: 3rem;}
+}
+
+
+.folio-core-grid > .mvp-wireframe-outline {
+  background-color: rgba(255, 255, 255, 0.432);
+  border: 5px solid hsl(204, 97%, 54%, 100%);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.folio-core-grid > * {
+  border: 5px solid hsl(204, 97%, 54%, 100%);
+}
+
+
+/*------Hero Panes in a 4x4 Grid with a large gap = side margins -------*/
+
+.hero-pane {
+  min-height: 355px;
+}
+
+.hero-pane-topleft {
+}
+
+.hero-pane-topright {
+  /* grid-area: top-hero; */
+}
+
+.hero-pane-bottomleft {
+}
+
+.hero-pane-bottomright {
+  /* grid-area: btm-hero; */
+}
