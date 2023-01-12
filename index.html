@@ -1,68 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+ <head title="Welcome to the Digital Folio">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0" />
-  <title>Document</title>
-  <link href="../assets/styles/main.css" rel="stylesheet" />
-  <base href="https://the-folio.github.io" />
+  <title>Welcome to the Digital Folio: Home (Landing)</title>
+  <link type="text/css" href="../assets/styles/main.css" rel="stylesheet" />
+  <base href="the-fo.github.io/" />
  </head>
  <body class="body-container">
-  <div class="folio-core-layout">
-   <!-- Component: Responsive Top Bar with 3 Block Components: Grid Wrapper of a Flexbox-->
-   <div class="folio-core-block-topbar">
-    <div class="folio-core-block-topbar-flex-spacer">
-     <!-- Top Bar Sub-Components Placeholder-->
-     <div class="folio-a11y-block-con bar-components">1</div>
-     <div class="folio-block-spacer bar-components">.</div>
-     <div class="folio-logo-block-con bar-components">2</div>
-     <div class="folio-block-spacer bar-components">a1</div>
-     <div class="folio-menu-block-con bar-components">3</div>
-    </div>
-   </div>
+  <div class="fo-core-layout" role="presentation">
+   <section
+    title="Site Navigation"
+    role="group"
+    aria-describedby="Top Navigation area containing A11y control sand Sitewide naviation">
+    <nav class="fo-core-nav" aria-describedby="Top Navigation: Horizontal, Top of Page">
+     <div class="fo-core-grid-topbar" role="presentation">
+      <div class="fo-core-row-topbarcontainer" role="presentation">
+       <div class="fo-a11y-block-con bar-comp" role="menu">
+        <menu
+         class="fo-nav-a11y"
+         title="A11y Accessibility Controls"
+         aria-describedby="Adjust the accessibility controls: Contrast, Color, Zoom"
+         aria-label="Accessibility Control"
+         >A11y
+        </menu>
+        <!-- Ally Controls -->
+       </div>
+       <div
+        class="fo-logo-block-con"
+        id="fo-logo-block"
+        title="The Digital Folio's Logo: Location: Page Center"
+        role="document"
+        aria-details="The Digital Folio's Logo: Location: Page Center"
+        aria-describedby="Logo: The Digital Folio (a meaningful image)">
+        <!-- Site Logo -->
+       </div>
+       <div class="fo-menu-block-con bar-comp" role="menu">
+        <menu
+         class="fo-nav-site"
+         title="Site Navigation Menu"
+         aria-describedby="Browse the site by choosing one of 5 menu options"
+         aria-label="Site Nav Menu"
+         >Drop Menu
+        </menu>
+        <!-- Site Menu -->
+       </div>
+      </div>
+     </div>
+    </nav>
+   </section>
    <!-- Main Body Canvas: -->
-   <main>
-    <div class="folio-core-grid">
-     <!-- Flow of layout is in a Z-Pattern: Top Left to Right, Bottom Left to Right -->
-     <div class="hero-pane hero-pane-topleft">
-      <header class="hero-landing-mainheader">
-       <h1 class="hero-landing-heading">
-        <span class="hero-main-title folio-typog">Large Text</span>
-       </h1>
-      </header>
-      <section class="hero-maincontent">Hero Pane Top</section>
-      <section class="hero-subcontent">
-       <div class="hero-pane-footer folio-cta folio-link-internal">
-        <span class="folio-content-text">
-         <a class="folio-links-internal" href="" target="_blank">Learn about Charlie</a>
-        </span>
+   <main title="" aria-details="Main body/canvas of home page">
+    <div class="fo-core-grid" role="presentation">
+     <section class="hero-pane hero-pane-topleft" id="land-top-left" role="group">
+      <h1 class="hero-landing-title" title="Welcome to the Digital Folio's Showcase">
+       <span class="hero-main-title fo-typog" role="document">Large Text</span>
+      </h1>
+      <section class="hero-maincontent" aria-label="Top Left: Hero Pane: Main Text">
+       Hero Pane Top
+      </section>
+      <section class="hero-subcontent" aria-label="Top Left: Hero Pane: Tag Line">
+       <div class="hero-pane-footer fo-cta fo-link-internal" role="presentation">
+        <span class="fo-content-text" role="link"> Charlie </span>
        </div>
       </section>
-     </div>
-     <div class="hero-pane hero-pane-topright">
-      <header class="hero-landing-porfolioheader">
-       <h2 class="hero-landing-heading">
-        <span class="hero-main-title folio-typog">Large Text</span>
-       </h2>
-      </header>
+     </section>
+     <section class="hero-pane hero-pane-topright" id="land-top-right" role="group">
+      <h2 class="hero-landing-heading">
+       <span class="hero-main-title mdn-fontfluid-header" role="document">Large Text</span>
+      </h2>
+      <img alt="Headshot" aria-label="Headshot, Circle," />
       <section class="hero-maincontent">Hero Pane Top</section>
-     </div>
-     <div class="hero-pane hero-pane-btmleft">
-      <header class="hero-landing-profileheader">
-       <h2 class="hero-landing-heading">
-        <span class="hero-main-title folio-typog">Large Text</span>
-       </h2>
-      </header>
+     </section>
+     <section class="hero-pane hero-pane-btmleft2">
+      <h3 class="hero-landing-heading">
+       <span class="hero-main-title mdn-fontfluid-tagline" role="document">Large Text</span>
+      </h3>
       <section class="hero-maincontent">Hero Pane Top</section>
-     </div>
-     <div class="hero-pane hero-pane-btmright">
-      <header class="hero-landing-contactheader">
-       <h2 class="hero-landing-heading">
-        <span class="hero-main-title folio-typog">Large Text</span>
-       </h2>
-      </header>
+     </section>
+     <section class="hero-pane hero-pane-btmright">
+      <h4 class="hero-landing-heading">
+       <span class="hero-main-title mdn-fontfluid-copy" role="document">Large Text</span>
+      </h4>
       <section class="hero-maincontent">Hero Pane Top</section>
-     </div>
+     </section>
     </div>
    </main>
   </div>

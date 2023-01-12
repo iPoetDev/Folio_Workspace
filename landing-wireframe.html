@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8" />
+ <head title="The Digital fo by CJ, a Web Developer/Designer's Portfo website">
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0" />
   <title>Document</title>
-  <link href="../assets/styles/main.css" rel="stylesheet" />
+  <link href="assets/styles/main.css" rel="stylesheet" />
+  <!--  0] Namespace F: fo: Namespace for The Digital Folio, Alias: fo
+          1] Alias:    C: Composition Comment -> Semantics & Layout
+          2] Alias:    U: Utility Comment     -  Core Styling, Typography
+          3] Alias:    B: Block/Component/Widget Comment
+          2] Alias:    E: Exception/Variant Comment
+-->
  </head>
  <body class="body-container">
-  <div class="folio-core-layout">
-   <div class="folio-core-block-topbar">
-    <div class="folio-core-block-topbar-flex-spacer">
-     <div class="folio-a11y-block-con bar-components">1</div>
-     <div class="folio-block-spacer bar-components">.</div>
-     <div class="folio-logo-block-con bar-components">2</div>
-     <div class="folio-block-spacer bar-components">.1</div>
-     <div class="folio-menu-block-con bar-components">3</div>
-    </div>
-   </div>
-   <div class="folio-core-grid">
+  <!-- Compose: Site Topbar: Navigation Components Container  -->
+  <div class="fo-core-layout" role="presentation">
+   <!-- class="fo-banner" -->
+   <section
+    title="Site Navigation"
+    role="group"
+    aria-describedby="Top Navigation containing A11y control sand Sitewide naviation">
+    <nav class="fo-core-block-topbar-flex-spacer">
+     <!-- <div class="fo-core-block-topbar" role="presentation">-->
+     <div class="fo-core-block-topbar-flex-spacer" role="presentation">
+      <div class="fo-a11y-block-con bar-components" role="menu">1</div>
+      <div class="fo-block-spacer bar-components" role="presentation">.</div>
+      <div class="fo-logo-block-con bar-components" role="region">2</div>
+      <div class="fo-block-spacer bar-components" role="presentation">.1</div>
+      <menu
+       class="fo-nav-site"
+       title="Site Navigation Menu"
+       aria-describedby="Browse the site by choosing one of 5 menu options"
+       aria-label="Site Nav Menu">
+       <div class="fo-menu-block-con bar-components" role="menu">3</div>
+      </menu>
+     </div>
+    </nav>
+   </section>
+
+   <div class="fo-core-grid">
     <!-- Flow of layout is in a Z-Pattern: Top Left to Right, Bottom Left to Right -->
     <div class="hero-pane hero-pane-topleft">Hero Pane Top</div>
     <div class="hero-pane hero-pane-topright">Hero Pane Top Right</div>
